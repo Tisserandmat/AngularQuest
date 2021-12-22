@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-directives',
@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
   isAdmin: boolean = false;
-
-  constructor() { }
+  displayGuestsList: boolean = true;
 
   ngOnInit(): void {
   }

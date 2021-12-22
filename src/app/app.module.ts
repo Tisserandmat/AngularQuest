@@ -3,13 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { StylesQuestDirective } from './styles-quest.directive';
+import { HighlightDirective } from './highlight.directive';
+import { DisplayGuestsDirective } from './display-guests.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DirectivesComponent,
-    StylesQuestDirective
+    HighlightDirective,
+    DisplayGuestsDirective
   ],
   imports: [
     BrowserModule

@@ -1,3 +1,15 @@
-<p [ngClass]="{'redText': isAdmin}">Bonjour</p>
-<button>View</button>
-<button *ngIf="isAdmin">Edit</button>
+<!-- Quest 3.2 Les Customs Directives (challenge) -->
+<h1>Liste de films</h1>
+<ul *appDisplayGuests="displayGuestsList">
+  <li appHighlight>The Godfather</li>
+  <li>The Shawshank Redemption</li>
+  <li>Gone With the Wind</li>
+  <li>Casablanca</li>
+  <li>It's a Wonderful Life</li>
+</ul>
+
+
+
+
+
+
