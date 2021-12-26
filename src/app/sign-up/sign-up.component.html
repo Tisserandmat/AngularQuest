@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit()" #signUpForm="ngForm">
+  <div>
+    <label for="firstname">firstname</label>
+    <input name="firstname" id="firstname" [(ngModel)]="model.firstname" type="text" required maxlength="5" >
+  </div>
+  <div>
+    <label for="lastname">lastname</label>
+    <input name="lastname" id="lastname" [(ngModel)]="model.lastname" type="text" required>
+  </div>
+  <div>
+    <label for="email">email</label>
+    <input name="email" id="email" [(ngModel)]="model.email" type="email" required>
+  </div>
+  <div>
+    <label for="password">password</label>
+    <input name="password" id="password" [(ngModel)]="model.password" type="password" required>
+  </div>
+  <button type="submit">Sauvegarder</button>
+</form>
