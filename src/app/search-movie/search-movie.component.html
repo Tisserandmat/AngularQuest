@@ -1,1 +1,53 @@
-<p>search-movie works!</p>
+<div class="container">
+
+  <div>
+    <p>Formulaire de recherche : </p>
+  </div>
+  <div>
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()"  #myForm="ngForm">
+      <div>
+        <label for="identifiant"> Identifiant :  </label>
+        <input id="identifiant" type="text" formControlName="identify">
+      </div>
+
+      <div>
+        <label for="title"> Titre : </label>
+        <input name="title" id="title" formControlName="title">
+      </div>
+      <div *ngIf="searchForm.errors">
+        <div >
+          <p *ngIf="myForm.submitted && searchForm.errors?.['isRequired']"
+             class="alert-danger mb-3 mt-3 ">  Le champ identifiant ou le champ titre doit être remplis.</p>
+        </div>
+      </div>
+
+      <div>
+        <select class="form-select" id="type" name="type" formControlName="type">
+          <option [ngValue]="0">film</option>
+          <option [ngValue]="1">série</option>
+          <option [ngValue]="2">épisode</option>
+        </select>
+      </div>
+      <div>
+        <label for="date"> Date de fin : </label>
+        <input name="date" id="date" type="number" formControlName="year">
+      </div>
+      <div *ngIf="searchForm.errors">
+        <div>
+          <p *ngIf="myForm.submitted && searchForm.get('year').errors?.['min']"
+             class="alert-danger mb-3 mt-3 "> l'année doit être supérieure à 1900 et inférieur ou égale a l'année en cours
+          </p>
+        </div>
+        </div>
+        <div>
+          <label for="fiche"> Fiche : </label>
+          <input name="fiche" id="fiche" type="number" formControlName="plug">
+        </div>
+
+        <div>
+          <button type="submit">Sauvegarder</button>
+        </div>
+    </form>
+
+  </div>
+</div>
