@@ -32,21 +32,23 @@
         <label for="date"> Date de fin : </label>
         <input name="date" id="date" type="number" formControlName="year">
       </div>
-      <div *ngIf="searchForm.errors">
+      <div *ngIf="searchForm.controls['year'].errors && myForm.submitted">
         <div>
           <p *ngIf="myForm.submitted && searchForm.get('year').errors?.['min']"
              class="alert-danger mb-3 mt-3 "> l'année doit être supérieure à 1900 et inférieur ou égale a l'année en cours
           </p>
         </div>
-        </div>
+      </div>
+
+      <div *ngIf=" !searchForm.errors?.['isRequired']">
         <div>
           <label for="fiche"> Fiche : </label>
           <input name="fiche" id="fiche" type="number" formControlName="plug">
         </div>
-
-        <div>
-          <button type="submit">Sauvegarder</button>
-        </div>
+      </div>
+      <div>
+        <button type="submit">Sauvegarder</button>
+      </div>
     </form>
 
   </div>
