@@ -1,3 +1,16 @@
 <div class="row justify-content-center">
   <h1 class="mt-4 text-center">Developer Component</h1>
+
+  <ul>
+    <li>age : {{devEnCarton?.age}}</li>
+    <li>bio : {{devEnCarton?.bio}}</li>
+    <li>firstname :  {{devEnCarton?.firstname}}</li>
+    <li>lastname :  {{devEnCarton?.lastname}}</li>
+    <li> sexe :{{devEnCarton?.sexe}}</li>
+  </ul>
+
+<div *ngFor="let devSkill of devEnCarton?.skills">
+  <app-skill-component [skills]="devSkill"> </app-skill-component>
+</div>
+
 </div>
