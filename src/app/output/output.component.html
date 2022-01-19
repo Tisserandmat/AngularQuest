@@ -1,0 +1,12 @@
+<section class="container">
+  <div class="row justify-content-center my-4">
+    <h1 class="text-center">(Composant Parent) : Liste d'onomatopées : </h1>
+  </div>
+  <div>
+    <p class="text-center">Voici les difféntes Onomatopées créer : </p>
+  </div>
+  <ul *ngFor="let onomatipix of onomatopoeias">
+    <li>{{onomatipix}}</li>
+  </ul>
+  <app-create-onomatopia (sendOnomatopiaToParent)="onReceiveNewOnomatopia($event)"></app-create-onomatopia>
+</section>

@@ -1,0 +1,25 @@
+<div class="row justify-content-center mt-4">
+  <h2 class="text-center">Créer une onomatopée (create-onomatopia.component (Chlidren)) </h2>
+</div>
+<div class="row justify-content-center">
+  <div class="col-8">
+    <h3 class="my-5 text-center">Créez-vous une nouvelle onomatopée : </h3>
+    <form (ngSubmit)="onSubmit()" action="" #onomatop="ngForm">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <label class="col-form-label" for="onomatopee">Onomatopée </label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="onomatopee" class="form-control" #onomatopee="ngModel" [(ngModel)]="newOnomatopia"
+                 required id="onomatopee">
+        </div>
+      </div>
+      <div class="text-center my-4">
+        <button class="btn btn-primary" (click)="createOnomatopia()">Valider</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+
